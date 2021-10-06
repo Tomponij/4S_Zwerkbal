@@ -14,7 +14,11 @@ class TeamController extends Controller
      */
     public function index()
     {
+        $teams = Team::all();
+        return view('teams/index')
+                ->with('teams', $teams);
         throw new \Exception('Niet geïmplementeerd - lijst van teams kan nog niet getoond worden.');
+        
     }
 
     /**
